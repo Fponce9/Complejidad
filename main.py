@@ -1,12 +1,10 @@
 import pandas as pd
 
-def CrearNodo():
+def TranferirDatos():
     archive = "Coordenas_Pueblos.xlsx"
     Info = pd.read_excel(archive, usecols="F,P,Q")
-    coordx = Info.iloc[1, 1]
-    print(coordx)
+    Info.sort_values(by="XGD")
     print(Info.head())
 
-CrearNodo()
 
 
